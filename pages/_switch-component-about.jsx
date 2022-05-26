@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { hybrid } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import axios from "axios";
