@@ -1,4 +1,4 @@
-import LeftBar from "./_components/LeftBar";
+import LeftBar from "./_components/leftbar";
 import {
   RiTerminalBoxFill,
   RiUser4Fill,

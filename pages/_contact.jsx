@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import LeftBar from "./_components/LeftBar";
+import LeftBar from "./_components/leftbar";
 import { RiArrowDropDownFill, RiMailFill } from "react-icons/ri";
 import { SiDiscord } from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";

@@ -1,4 +1,4 @@
-import LeftBar from "./_components/LeftBar";
+import LeftBar from "./_components/leftbar";
 import { Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { RiArrowDropDownFill } from "react-icons/ri";
 import {

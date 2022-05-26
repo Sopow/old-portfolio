@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Footer from "./_components/Footer";
-import Navbar from "./_components/Navbar";
+import Footer from "./_components/footer";
+import Navbar from "./_components/navbar";
 import SwitchComponent from "./_switch-component";
 
 export default function App() {
