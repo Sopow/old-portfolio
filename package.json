@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
     "axios": "^0.27.2",
     "badwords-list": "^1.0.0",
     "dotenv": "^16.0.1",

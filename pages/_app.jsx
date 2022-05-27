@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import "react-pro-sidebar/dist/css/styles.css";
-import { Head } from "next/document";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
