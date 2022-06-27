@@ -7,6 +7,7 @@ import {
   SiRuby,
   SiExpress,
   SiReact,
+  SiUnrealengine
 } from "react-icons/si";
 import { useChecklist } from "react-checklist";
 import { useEffect, useState } from "react";
@@ -37,6 +38,10 @@ export default function Projects() {
       name: "ruby",
       icon: <SiRuby />,
     },
+    {
+      name: "ue5",
+      icon: <SiUnrealengine/>
+    }
   ];
   const [projects, setProjects] = useState([]);
   const fetchProject = () => {
@@ -131,6 +136,7 @@ export default function Projects() {
                               SiNextdotjs,
                               SiTypescript,
                               SiRuby,
+                              SiUnrealengine
                             }}
                           />
                         </span>
