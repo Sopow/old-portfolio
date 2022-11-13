@@ -102,7 +102,7 @@ export default class About extends React.Component {
                 className="border-top"
               >
                 <MenuItem icon={<RiMailFill />} className="no-margin-left">
-                  contact@sopow.fr
+                  sopowbs@gmail.com
                 </MenuItem>
                 <MenuItem icon={<SiDiscord />} className="no-margin-left">
                   sopow#7130
