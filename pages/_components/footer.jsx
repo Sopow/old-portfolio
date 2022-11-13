@@ -11,7 +11,7 @@ export default function Footer() {
           style={{
             borderRight: '2px solid #1b2c3d',
           }}
-          onClick={() => createWindowandRedirect('https://twitter.com/zsopow')}
+          onClick={() => createWindowandRedirect('https://twitter.com/gsopow')}
         >
           <SiTwitter />
         </li>

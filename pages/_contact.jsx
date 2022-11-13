@@ -72,7 +72,7 @@ button.onclick = () => {
     },
     {
       title: "Twitter page",
-      link: "https://www.twitter.com/ZSopow",
+      link: "https://www.twitter.com/GSopow",
     },
   ];
   return (
@@ -88,7 +88,7 @@ button.onclick = () => {
               style={{ width: "22vw" }}
             >
               <MenuItem icon={<RiMailFill />} className="no-margin-left">
-                contact@sopow.fr
+                sopowbs@gmail.com
               </MenuItem>
               <MenuItem icon={<SiDiscord />} className="no-margin-left">
                 sopow#7130
