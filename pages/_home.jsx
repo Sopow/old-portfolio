@@ -14,7 +14,7 @@ export default function Home() {
         <div className="presentation">
           <p>Hi all. I am</p>
           <h1>Sopow</h1>
-          <p className="pre-blue">{">"} Free-lance web developmer</p>
+          <p className="pre-blue">{">"} Free-lance web developer</p>
           <p className="pre-grey">{"//"} find my profile on Github:</p>
           <p className="presentation-code">
             <span className="pre-code-blue">const</span>{" "}
