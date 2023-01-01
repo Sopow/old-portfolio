@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           content="Personal website created by Sopow"
         />
         <meta property="og:image" content="https://imgur.com/37syxRn" />
-
+        <meta name="google-site-verification" content="tf06sdvU_f3DljkLJ8cemWHYRSgoxYhyUuym9L00BT8" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://www.sopow.fr/" />
         <meta name="twitter:title" content="Sopow | Portfolio" />
