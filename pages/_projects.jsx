@@ -52,10 +52,7 @@ export default function Projects() {
   useEffect(() => {
     fetchProject();
   }, []);
-  const { handleCheck, checkedItems } = useChecklist(data, {
-    key: '_id',
-    keyType: 'number',
-  });
+  const { handleCheck, checkedItems } = useChecklist(data)
   let items = Array.from(checkedItems);
   return (
     <>
@@ -110,7 +107,7 @@ export default function Projects() {
                       className="flex project-title"
                       style={{ justifyContent: "flex-start" }}
                     >
-                      <h2>Project {v._id + 1}</h2>
+                      <h2>Project {i + 1}</h2>
                       <p>
                         {"//"} _{v.name}
                       </p>
