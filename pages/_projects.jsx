@@ -7,7 +7,7 @@ import {
   SiRuby,
   SiExpress,
   SiReact,
-  SiUnrealengine
+  SiUnrealengine,
 } from "react-icons/si";
 import { useChecklist } from "react-checklist";
 import { useEffect, useState } from "react";
@@ -40,10 +40,11 @@ export default function Projects() {
     },
     {
       name: "ue5",
-      icon: <SiUnrealengine/>
-    }
+      icon: <SiUnrealengine />,
+    },
   ];
   const [projects, setProjects] = useState([]);
+
   const fetchProject = () => {
     axios.get("/api/projects").then((res) => {
       setProjects(res.data);
@@ -52,7 +53,7 @@ export default function Projects() {
   useEffect(() => {
     fetchProject();
   }, []);
-  const { handleCheck, checkedItems } = useChecklist(data)
+  const { handleCheck, checkedItems } = useChecklist(data);
   let items = Array.from(checkedItems);
   return (
     <>
@@ -87,7 +88,7 @@ export default function Projects() {
           </Menu>
         </LeftBar>
         <div
-          className="container"
+          className="container detect"
           style={{
             flexWrap: "wrap",
             overflow: "auto",
@@ -99,8 +100,14 @@ export default function Projects() {
           }}
         >
           {projects.projects &&
-            projects.projects.map((v, i) => {
-              if (items.includes(v.category.name.toLowerCase())) {
+            projects.projects
+              .filter((v) => items.includes(v.category.name.toLowerCase()))
+              .sort((a, b) =>
+                projects.projects.indexOf(a) > projects.projects.indexOf(b)
+                  ? 1
+                  : -1
+              )
+              .map((v, i) => {
                 return (
                   <div key={i} className={`project ${v.category.name}`}>
                     <div
@@ -136,7 +143,7 @@ export default function Projects() {
                               SiNextdotjs,
                               SiTypescript,
                               SiRuby,
-                              SiUnrealengine
+                              SiUnrealengine,
                             }}
                           />
                         </span>
@@ -145,9 +152,8 @@ export default function Projects() {
                     </div>
                   </div>
                 );
-              }
-              return null;
-            })}
+              })}
+
           {Array.isArray(items) && items.length <= 0 ? (
             <h1 className="project-notselected">
               You need to select a project
