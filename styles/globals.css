@@ -1246,3 +1246,7 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
 }
+
+.project-card>p::-webkit-scrollbar{
+    display: none;
+  }
