@@ -6,14 +6,14 @@ export default async function handler(req, res) {
             message: 'No data provided'
         })
     }
-    await axios.post('https://discord.com/api/webhooks/970771448652234803/Z-vVxElX3LQoMsMFUPrbIkydmZUUxGG_5jV_JPfNkj31xD72KF_A8gyLdkI9atqGPPy3', {
+    await axios.post('https://discord.com/api/webhooks/1130227075912052806/8H7_beyv09kITCAAiby3Oahf6Zf_Lee8GHZmFadP3qr9387t5C0IzLJs-D48XrbFHJfc', {
         embeds: [{
-            title: `${req.body.name} has contacted you! (${req.body.email})`,
+            title: `${req.body.name} vous à envoyé un mail ! (${req.body.email})`,
             description: req.body.message,
             color: 16763904,
             timestamp: new Date(),
             footer: {
-                text: 'Contact Form' + ' | ' + req.body.date
+                text: 'Formulaire de contact' + ' | ' + req.body.date
             }
         }]
     }).then(() => {
