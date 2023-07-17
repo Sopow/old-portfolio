@@ -5,6 +5,7 @@ import { Chess } from "chess.js";
 function ChessboardCustom() {
   const [game, setGame] = useState(new Chess());
   const [isGameOver, setIsGameOver] = useState(false);
+  const [isGameDraw, setIsGameDraw] = useState(false);
   const [startGame, setStartGame] = useState(false);
 
   function safeGameMutate(modify) {
@@ -17,9 +18,20 @@ function ChessboardCustom() {
   //Movement of computer
   function makeRandomMove() {
     const possibleMove = game.moves();
+    console.log(possibleMove);
 
-    if (game.game_over() || game.in_draw() || possibleMove.length === 0) {
+    if (game.game_over() || possibleMove.length === 0) {
       setIsGameOver(true);
+      return;
+    }
+
+    if (
+      game.in_draw() ||
+      game.in_stalemate() ||
+      game.in_threefold_repetition() ||
+      game.insufficient_material()
+    ) {
+      setIsGameDraw(true);
       return;
     }
 
@@ -59,18 +71,42 @@ function ChessboardCustom() {
         }}
         customDarkSquareStyle={{ backgroundColor: "#011627d6" }}
         customLightSquareStyle={{ backgroundColor: "#175553" }}
+        customArrowColor="#43D9AD"
       />
-      {isGameOver && (
-        <div className="game-over">
-          <p style={{ fontWeight: "bold" }}>Game Over</p>
-          <p>{game.turn() === "w" ? "Black" : "White"} won</p>
-          <button onClick={resetGame}>Play Again</button>
-        </div>
-      )}
+      {isGameDraw ||
+        (isGameOver && (
+          <div className="game-over">
+            <button
+              onClick={() => setIsGameOver(false)}
+              className="close-button"
+            >
+              ✖
+            </button>
+
+            {isGameDraw && (
+              <>
+                <p>Draw</p>
+              </>
+            )}
+            {isGameOver && (
+              <>
+                <p style={{ fontWeight: "bold" }}>Game Over</p>{" "}
+                <p>{game.turn() === "w" ? "Black" : "White"} won</p>
+              </>
+            )}
+            <button onClick={resetGame} className="button-play">
+              Play Again
+            </button>
+          </div>
+        ))}
       {!startGame && (
         <div className="game-over">
-          <p style={{ fontWeight: "bold" }}>Start Game</p>
-          <button onClick={() => setStartGame(true)}>Play</button>
+          <p style={{ fontWeight: "bold", paddingBottom: "10px" }}>
+            Start Game
+          </p>
+          <button onClick={() => setStartGame(true)} className="button-play">
+            Play
+          </button>
         </div>
       )}
     </div>

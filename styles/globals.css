@@ -16,8 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 code {
@@ -1360,10 +1359,30 @@ pre::-webkit-scrollbar {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
   text-align: center;
   z-index: 100;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  color: red;
 }
 
 .game-over p {
@@ -1371,7 +1390,7 @@ pre::-webkit-scrollbar {
   margin-bottom: 10px;
 }
 
-.game-over button {
+.button-play {
   background-color: #175553;
   color: #fff;
   border: none;
@@ -1379,8 +1398,35 @@ pre::-webkit-scrollbar {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-.game-over button:hover {
+.button-play:hover {
   background-color: #0e423f;
+}
+
+@media screen and (max-width: 500px) {
+  .presentation-code {
+    position: absolute;
+    bottom: 20%;
+    flex-direction: row !important;
+  }
+
+  .presentation, .presentation > p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .presentation > .pre-grey {
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 }
