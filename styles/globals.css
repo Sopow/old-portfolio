@@ -1104,6 +1104,7 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
     min-height: 86vh;
     height: 100%;
     overflow: scroll;
+    justify-content: center;
   }
 
   .footer {
@@ -1207,6 +1208,7 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
   }
 
   .presentation::after {
+    animation: glow 5s ease-in-out infinite alternate;
     content: "";
     position: absolute;
     display: flex;
@@ -1226,6 +1228,7 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
   }
 
   .presentation::before {
+    animation: glow 5s ease-in-out infinite alternate;
     z-index: 5;
     content: "";
     position: absolute;
