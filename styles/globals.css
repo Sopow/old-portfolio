@@ -55,6 +55,11 @@ ul {
   align-items: center;
 }
 
+.snake-game > div > div > div > div {
+  box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+  border-radius: 5px;
+}
+
 .components-container {
   height: 7vh;
   border: 1px solid #1e2d3d;
