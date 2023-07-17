@@ -16,6 +16,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 code {
