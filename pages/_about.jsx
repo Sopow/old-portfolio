@@ -13,6 +13,7 @@ import React from "react";
 import SwitchComponent from "./_switch-component-about";
 import { SiDiscord } from "react-icons/si";
 import axios from "axios";
+import createWindowandRedirect from "./_func/redirect";
 
 export default class About extends React.Component {
   state = {
@@ -37,6 +38,18 @@ export default class About extends React.Component {
   }
 
   render() {
+    const contact = [
+      {
+        title: "contact@sopow.fr",
+        link: "mailto:contact@sopow.fr",
+        icon: <RiMailFill />,
+      },
+      {
+        title: "gsopow",
+        link: "https://discord.com/users/853394858895343636",
+        icon: <SiDiscord />,
+      },
+    ];
     return (
       <>
         <div className="container" style={{ justifyContent: "start" }}>
@@ -101,12 +114,20 @@ export default class About extends React.Component {
                 id="border-bottom"
                 className="border-top"
               >
-                <MenuItem icon={<RiMailFill />} className="no-margin-left">
-                  contact@sopow.fr
-                </MenuItem>
-                <MenuItem icon={<SiDiscord />} className="no-margin-left">
-                  gsopow
-                </MenuItem>
+                {contact.map((v, i) => {
+                  return (
+                    <MenuItem
+                      key={i}
+                      icon={v.icon}
+                      className="no-margin-left"
+                      onClick={() => {
+                        createWindowandRedirect(v.link);
+                      }}
+                    >
+                      {v.title}
+                    </MenuItem>
+                  );
+                })}
               </SubMenu>
             </Menu>
           </LeftBar>

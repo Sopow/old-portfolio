@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="container">
+        <span className="animated-glow"></span>
         <div className="presentation">
           <p>Hi all. I am</p>
           <h1>Sopow</h1>

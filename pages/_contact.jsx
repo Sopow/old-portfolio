@@ -60,7 +60,9 @@ button.onclick = () => {
           </div>
         );
 
-        const root = ReactDOM.createRoot(document.querySelector(".contact-form"));
+        const root = ReactDOM.createRoot(
+          document.querySelector(".contact-form")
+        );
         root.render(messageSent);
       });
     }
@@ -75,6 +77,18 @@ button.onclick = () => {
       link: "https://www.twitter.com/GSopow",
     },
   ];
+  const contact = [
+    {
+      title: "contact@sopow.fr",
+      link: "mailto:contact@sopow.fr",
+      icon: <RiMailFill />,
+    },
+    {
+      title: "gsopow",
+      link: "https://discord.com/users/853394858895343636",
+      icon: <SiDiscord />,
+    },
+  ];
   return (
     <>
       <div className="container" style={{ width: "100%" }}>
@@ -87,12 +101,20 @@ button.onclick = () => {
               className="border-top"
               style={{ width: "22vw" }}
             >
-              <MenuItem icon={<RiMailFill />} className="no-margin-left">
-                contact@sopow.fr
-              </MenuItem>
-              <MenuItem icon={<SiDiscord />} className="no-margin-left">
-                gsopow
-              </MenuItem>
+              {contact.map((v, i) => {
+                return (
+                  <MenuItem
+                    key={i}
+                    icon={v.icon}
+                    className="no-margin-left"
+                    onClick={() => {
+                      createWindowandRedirect(v.link);
+                    }}
+                  >
+                    {v.title}
+                  </MenuItem>
+                );
+              })}
             </SubMenu>
             <SubMenu
               title="find-me-also-in"

@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="twitter:image" content={img} />
         <meta name="theme-color" content="#011627" />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Component {...pageProps} />

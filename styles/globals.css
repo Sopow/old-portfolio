@@ -282,9 +282,22 @@ ul {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  animation: glow 5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+  }
+  to {
+    -webkit-box-shadow: 0 0 50px 10px #4d5bce;
+    box-shadow: 0 0 50px 5px #4d5bce;
+  }
 }
 
 .snake-game::before {
+  animation: glow 5s ease-in-out infinite alternate;
   content: "";
   position: absolute;
   display: -webkit-box;
@@ -1037,9 +1050,8 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
 }
 
 @media screen and (max-width: 1200px) {
-
-    body {
-  overflow: scroll !important;
+  body {
+    overflow: scroll !important;
   }
 
   .about_components-color-mobile {
@@ -1411,7 +1423,8 @@ pre::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 500px) {
-  .presentation, .presentation > p {
+  .presentation,
+  .presentation > p {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1424,7 +1437,6 @@ pre::-webkit-scrollbar {
     position: relative;
     display: block !important;
   }
-
 
   .presentation > .pre-grey {
     margin-top: 50px;
