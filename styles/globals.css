@@ -16,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
+  overflow: hidden;
 }
 
 code {
@@ -1036,8 +1037,9 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
 }
 
 @media screen and (max-width: 1200px) {
-  body {
-  overflow: hidden;
+
+    body {
+  overflow: scroll !important;
   }
 
   .about_components-color-mobile {
