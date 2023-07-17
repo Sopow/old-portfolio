@@ -48,7 +48,7 @@ ul {
 .container {
   height: 86vh;
   width: 100%;
-  background: url(/image.svg);
+  background: url(/grid.svg);
   border: 1px solid #1e2d3d;
   display: -webkit-box;
   display: -ms-flexbox;
