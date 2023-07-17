@@ -1,4 +1,4 @@
-import { SiDiscord, SiTwitter, SiGithub } from 'react-icons/si';
+import { SiTwitter, SiGithub } from 'react-icons/si';
 import createWindowandRedirect from '../_func/redirect';
 
 export default function Footer() {

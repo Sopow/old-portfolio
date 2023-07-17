@@ -17,7 +17,7 @@ export default class SwitchComponent extends React.Component {
   }
 
   setTextState() {
-    this.state.about.map((v, i) => {
+    this.state.about.map((v) => {
       if (
         v.title === this.props.info.title &&
         v.category === this.props.info.category
@@ -27,7 +27,7 @@ export default class SwitchComponent extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (!this.state.isFetched) {
       this.fetchAbout();
     }
@@ -44,7 +44,7 @@ export default class SwitchComponent extends React.Component {
   render() {
     return (
       <div className="about_components-container">
-        {this.props.info.category && (
+        {this.props?.info?.category && (
           <p className="about_components-details" style={{ display: "flex"}}>
             <span style={{ marginRight: "10px", color: "white" }} className="about_components-displayable-mobile">{"//"}</span>
             <span style={{ marginRight: "10px" }} className="about_components-color-mobile">

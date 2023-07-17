@@ -1,22 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-import {
-  IoMdArrowDropup,
-  IoMdArrowDropdown,
-  IoMdArrowDropleft,
-  IoMdArrowDropright,
-} from "react-icons/io";
 import createWindowandRedirect from "./_func/redirect";
 import ChessboardCustom from "./_components/chessboard";
 
 export default function Home() {
-  const isMobile = () => {
-    if (window.innerWidth <= 800) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   return (
     <>
       <div className="container">

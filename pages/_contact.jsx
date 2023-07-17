@@ -46,7 +46,7 @@ button.onclick = () => {
         message: message.message,
         date: new Date().toLocaleDateString("fr-FR"),
       };
-      axios.post("/api/contact", data).then((res) => {
+      axios.post("/api/contact", data).then(() => {
         const messageSent = (
           <div className="message-sent">
             <span>Thank you! 🤘</span>
