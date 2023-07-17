@@ -4,7 +4,7 @@ import ChessboardCustom from "./_components/chessboard";
 export default function Home() {
   return (
     <div className="container-background">
-      <div className="container">
+      <div className="container container-grid">
         <div className="presentation">
           <p>Hi all. I am</p>
           <h1>Sopow</h1>

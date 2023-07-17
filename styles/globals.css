@@ -45,10 +45,14 @@ ul {
   background: #011627;
 }
 
+.container-grid {
+  background: url(/grid.svg) !important;
+}
+
 .container {
   height: 86vh;
   width: 100%;
-  background: url(/grid.svg);
+  background: #011627;
   border: 1px solid #1e2d3d;
   display: -webkit-box;
   display: -ms-flexbox;
