@@ -6,8 +6,17 @@ import {
   IoMdArrowDropright,
 } from "react-icons/io";
 import createWindowandRedirect from "./_func/redirect";
+import ChessboardCustom from "./_components/chessboard";
 
-export default function Home() {  
+export default function Home() {
+  const isMobile = () => {
+    if (window.innerWidth <= 800) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -15,19 +24,19 @@ export default function Home() {
           <p>Hi all. I am</p>
           <h1>Sopow</h1>
           <p className="pre-blue">{">"} Free-lance web developer</p>
-          <p className="pre-grey">{"//"} find my profile on Github:</p>
-          <p className="presentation-code">
-            <span className="pre-code-blue">const</span>{" "}
-            <span className="pre-code-green">githubLink</span> ={" "}
-            <span
-              className="pre-code-ahref"
-              onClick={() =>
-                createWindowandRedirect("https://github.com/Sopow")
-              }
-            >
-              {'"'}https://github.com/Sopow{'"'}
-            </span>
-          </p>
+            <p className="pre-grey">{"//"} find my profile on Github:</p>
+            <p className="presentation-code">
+              <span className="pre-code-blue">const</span>{" "}
+              <span className="pre-code-green">githubLink</span> ={" "}
+              <span
+                className="pre-code-ahref"
+                onClick={() =>
+                  createWindowandRedirect("https://github.com/Sopow")
+                }
+              >
+                {'"'}https://github.com/Sopow{'"'}
+              </span>
+            </p>
         </div>
         <div className="snake-game">
           <div className="border-snakegame">
@@ -44,34 +53,7 @@ export default function Home() {
               <img src="/svg-x.svg" alt="x" />
             </span>
           </div>
-          <canvas
-            className="snake-game-container"
-            id="snake-game"
-            width="300"
-            height="600"
-          />
-          <span className="snake-game-start-button">{'//'} soon...</span>
-          <div className="snake-game-help">
-            <span className="snake-game-help-text">
-              {"//"} use keyboard
-              <br />
-              {"//"} arrow to play
-            </span>
-            <div className="snake-game-help-arrows">
-              <span className="snake-game-help-arrow">
-                <IoMdArrowDropleft />
-              </span>
-              <span className="snake-game-help-arrow">
-                <IoMdArrowDropdown />
-              </span>
-              <span className="snake-game-help-arrow">
-                <IoMdArrowDropright />
-              </span>
-              <span className="snake-game-help-arrow">
-                <IoMdArrowDropup />
-              </span>
-            </div>
-          </div>
+          <ChessboardCustom />
         </div>
       </div>
     </>
