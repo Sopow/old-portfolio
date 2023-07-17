@@ -1411,18 +1411,18 @@ pre::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 500px) {
-  .presentation-code {
-    position: absolute;
-    bottom: 20%;
-    flex-direction: row !important;
-  }
-
   .presentation, .presentation > p {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
+  }
+
+  .presentation-code {
+    position: relative;
+    display: block !important;
   }
 
 
