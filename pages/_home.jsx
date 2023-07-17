@@ -3,9 +3,8 @@ import ChessboardCustom from "./_components/chessboard";
 
 export default function Home() {
   return (
-    <>
+    <div className="container-background">
       <div className="container">
-        <span className="animated-glow"></span>
         <div className="presentation">
           <p>Hi all. I am</p>
           <h1>Sopow</h1>
@@ -42,6 +41,6 @@ export default function Home() {
           <ChessboardCustom />
         </div>
       </div>
-    </>
+    </div>
   );
 }
