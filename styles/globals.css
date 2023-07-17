@@ -1045,6 +1045,7 @@ div.react-inputs-validation__msg_identifier.react-inputs-validation__msg.react-i
     font-size: 17px;
     line-height: 150%;
     padding: 20px 40px !important;
+    border: none;
   }
 
   .about_components-displayable-mobile {
