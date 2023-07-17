@@ -3,7 +3,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
-  const img = "https://i.imgur.com/2TUGYnR.png"
+  const img = "https://i.imgur.com/QUAh8N6.png"
   return (
     <>
       <Head>
