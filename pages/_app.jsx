@@ -1,9 +1,17 @@
 import "../styles/globals.css";
 import "react-pro-sidebar/dist/css/styles.css";
 import Head from "next/head";
+import ascii from "../utils/ascii";
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
-  const img = "https://i.imgur.com/766AFNG.png"
+  const img = "https://i.imgur.com/766AFNG.png";
+  React.useEffect(() => {
+    console.log(
+      ascii,
+      "color: #7488E5FF; font-family: monospace; font-size: 0.9em;"
+    );
+  }, []);
   return (
     <>
       <Head>
@@ -16,7 +24,10 @@ function MyApp({ Component, pageProps }) {
           content="Personal website created by Sopow"
         />
         <meta property="og:image" content={img} />
-        <meta name="google-site-verification" content="tf06sdvU_f3DljkLJ8cemWHYRSgoxYhyUuym9L00BT8" />
+        <meta
+          name="google-site-verification"
+          content="tf06sdvU_f3DljkLJ8cemWHYRSgoxYhyUuym9L00BT8"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://www.sopow.ga/" />
         <meta name="twitter:title" content="Sopow | Portfolio" />

@@ -12,8 +12,10 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "axios": "^0.27.2",
     "badwords-list": "^1.0.0",
+    "caniuse-lite": "^1.0.30001516",
     "chess.js": "^0.13.3",
     "dotenv": "^16.0.1",
+    "image-to-ascii": "^3.0.13",
     "js-chess-engine": "^1.0.2",
     "mongoose": "^6.3.4",
     "next": "12.1.6",
@@ -33,5 +35,10 @@
     "babel-eslint": "^10.1.0",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
