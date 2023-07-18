@@ -18,7 +18,6 @@ function ChessboardCustom() {
   //Movement of computer
   function makeRandomMove() {
     const possibleMove = game.moves();
-    console.log(possibleMove);
 
     if (game.game_over() || possibleMove.length === 0) {
       setIsGameOver(true);
