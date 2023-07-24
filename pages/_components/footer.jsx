@@ -1,5 +1,6 @@
 import { SiTwitter, SiGithub } from 'react-icons/si';
 import createWindowandRedirect from '../_func/redirect';
+import Twitter from './Twitter';
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           }}
           onClick={() => createWindowandRedirect('https://twitter.com/gsopow')}
         >
-          <SiTwitter />
+          <Twitter />
         </li>
         <li
           className="flex github"

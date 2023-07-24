@@ -73,7 +73,7 @@ button.onclick = () => {
       link: "https://www.github.com/Sopow",
     },
     {
-      title: "Twitter page",
+      title: "X page",
       link: "https://www.twitter.com/GSopow",
     },
   ];
