@@ -7,9 +7,9 @@ export default function App() {
   const [page, setPage] = useState("home");
   return (
     <>
-    <Navbar page={page} setPage={setPage} />
-    <SwitchComponent component={page} />
-    <Footer />
-  </>
+      <Navbar page={page} setPage={setPage} />
+      <SwitchComponent component={page} />
+      <Footer />
+    </>
   );
 }

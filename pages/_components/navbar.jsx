@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 
 export default function Navbar({ page, setPage }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     document.querySelector(`li.flex.${page}`).style.borderBottom =
       "2px solid #FEA55F";
@@ -16,22 +18,36 @@ export default function Navbar({ page, setPage }) {
         "2px solid #FEA55F";
     }
     setPage(_page);
+    setIsMenuOpen(false); // Ferme le menu après le clic
   }
+
   return (
     <div className="components-container navbar flex">
       <p>sopow</p>
       <div className="burger-menu">
-        <Menu>
+        <Menu
+          isOpen={isMenuOpen}
+          onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
+          top
+        >
           <a id="home" className="menu-item" onClick={() => thisPage("home")}>
             _home
           </a>
           <a id="about" className="menu-item" onClick={() => thisPage("about")}>
             _about
           </a>
-          <a id="projects" className="menu-item" onClick={() => thisPage("projects")}>
+          <a
+            id="projects"
+            className="menu-item"
+            onClick={() => thisPage("projects")}
+          >
             _projects
           </a>
-          <a id="contact" className="menu-item" onClick={() => thisPage("contact")}>
+          <a
+            id="contact"
+            className="menu-item"
+            onClick={() => thisPage("contact")}
+          >
             _contact
           </a>
         </Menu>
