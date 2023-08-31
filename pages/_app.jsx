@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Sopow</title>
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sopow.ga/" />
+        <meta property="og:url" content="https://www.sopow.fr/" />
         <meta property="og:title" content="Sopow | Portfolio" />
         <meta
           property="og:description"
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           content="tf06sdvU_f3DljkLJ8cemWHYRSgoxYhyUuym9L00BT8"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.sopow.ga/" />
+        <meta name="twitter:url" content="https://www.sopow.fr/" />
         <meta name="twitter:title" content="Sopow | Portfolio" />
         <meta
           name="twitter:description"
